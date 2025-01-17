@@ -1,16 +1,31 @@
 {
   "name": "electron-auto-update-demo",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "company name",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "yohan-oc",
+        "repo": "electron-auto-update-demo"
+      }
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "electron": "^34.0.0"
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
   }
 }
